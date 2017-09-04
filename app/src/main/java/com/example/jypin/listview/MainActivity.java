@@ -12,7 +12,7 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView txtResult;
     private ListView lstPrefer;
-    String [] Balls=new String [] {"籃球", "足球", "棒球", "其他"};
+    String [] Balls=new String [] {"basketball", "soccer", "baseball", "籃球", "足球", "棒球", "其他"};
 
 
     @Override
@@ -22,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
 
         txtResult=(TextView)findViewById(R.id.txtResult);
         lstPrefer=(ListView)findViewById(R.id.lstPrefer);
+        lstPrefer.setSelector(R.drawable.green);
+        lstPrefer.setTextFilterEnabled(true);
 
         ArrayAdapter<String> adapterBalls=new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, Balls);
 
